@@ -15,12 +15,13 @@
 			<li class="toggle">
 			  <div class="bar1"></div><div class="bar2"></div><div class="bar3"></div>
 			</li>
-			<li><a href="" class="active">Home</a></li>
+			<li><a href="index.php" class="active">Home</a></li>
 			<li><a href="">News</a></li>
 			<li><a href="">VIP Tours</a></li>
 			<li><a href="">Impressions</a></li>    
 			<li><a href="">About us</a></li>    
-			<li><a href="">Contact </a></li>    
+			<li><a href="contact.php">Contact </a></li>    
+			<li><a href="guest.php">Guestbook </a></li>    
 			<li><a href="login.php">Login </a></li>    
 			<li><a href="registrieren.php">Registrieren </a></li>    
 		</ul>
