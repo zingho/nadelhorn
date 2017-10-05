@@ -16,11 +16,7 @@ body {
   padding: 0;
   font-family:'Open Sans','Helvetica Neue',Arial,sans-serif;
   color: #808080;
-  overflow-x:hidden;
-}
-
-h3{
-	text-align:center;
+  overflow: scroll;
 }
 
 header {
@@ -82,12 +78,6 @@ header .inhalt .title p {
         max-width: 80%;
         font-size: 18px;
     }
-	
-	.artikel{
-	display: inline-block;
-	margin-right: auto;
-	margin-left: auto;
-  }
 }
 
 #header{
@@ -172,7 +162,7 @@ body div #navigation{
  .toggle {
   display: none;
   position: absolute;
-  left: -76px;
+  left: -55px;
   top: 0;
   cursor: pointer;
   background: rgba(0, 0, 0, 0.6);
@@ -198,6 +188,7 @@ body div #navigation{
   transform: rotate(-45deg) translate(7px, -6px);
 }
 
+/* content */
 h1{
   padding: 10px;
 }
@@ -228,7 +219,7 @@ h1{
   #nav {
     width: 230px;
     max-width: 480px;
-    height: 98%;
+    height: 100%;
     position: absolute;
     top: 0;
     right: -230px;
@@ -240,12 +231,6 @@ h1{
     border-color: transparent;
     background: rgba(0, 0, 0, 0.5);
     color: #FFFFFF;
-  }
-  
-  .artikel{
-  display: inline-block;
-  margin-right: auto;
-  margin-left: auto;
   }
 }
 
@@ -259,52 +244,5 @@ h1{
         margin-right: auto;
         margin-left: auto;
         max-width: 1000px;
-		text-align:center;
-		font-size:1.1em;
-}
-.text li{
-        margin-right: auto;
-        margin-left: auto;
-        max-width: 1000px;
-		text-align:center;
-		font-size:1.1em;
-}
-
-.artikel1{
-	width:103.2%;
-	border-radius: 5px;
-	-moz-border-radius: 5px;
-	-webkit-border-radius: 5px;
-	margin-left:-6px;
-	margin-top:-6px;
-	
-}
-
-#artikel{
-	width:100%;
-	        margin-right: auto;
-        margin-left: auto;
-        max-width: 1000px;
-}
-
-.artikel{
-    display: inline-block;
-    width: 400px;
-    margin-left: 80px;
-    margin-right:auto;
-	margin-bottom:20px;
-	max-width: 768px;
-    padding: 5px;
-	background: #f5f5f5;
-	border: 1px solid #FFF;
-	border-radius: 5px;
-	-moz-border-radius: 5px;
-	-webkit-border-radius: 5px;
-	box-shadow: 1px 2px 4px rgba(0,0,0,.4);
-}
-
-.clear { clear: both; }
-
-.beschreibung{
-		font-size:1.1em;
+		font-size:1.2em;
 }
