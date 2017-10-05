@@ -8,7 +8,7 @@
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet"> 
   </head>
   <body>
-  <div class="container">
+  <div class="containerguestbook">
 	<div id="header">
 		<img src="images/logo.png" class="logo">
 		<ul id="nav">
@@ -21,7 +21,7 @@
 			<li><a href="">Impressions</a></li>    
 			<li><a href="">About us</a></li>    
 			<li><a href="contact.php">Contact </a></li>    
-			<li><a href="guest.php">Guestbook </a></li>    
+			<li><a href="guest.php" class="active">Guestbook </a></li>    
 			<li><a href="login.php">Login </a></li>    
 			<li><a href="registrieren.php">Registrieren </a></li>    
 		</ul>
@@ -30,8 +30,8 @@
 	<header>
 	<div class="inhalt">
             <div class="title">
-                <h1>Switzerland beyond your imagination</h1>
-                <p>there is a lot to see in this wonderful country. We organize tours to the Region of Lucerne including it's fantastic lake, the center of Switzerland, the Bernese Oberland, Grimsel Pass, the gorgeous beauty of Valais and Graubünden to mention a few highlights.</p>
+                <h1>Guestbook</h1>
+                
             </div>
     </div>
 	</header>
