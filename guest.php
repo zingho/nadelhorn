@@ -130,11 +130,10 @@
 		 $name = htmlentities($row['name']);
 		 $email = htmlentities($row['email']);
 		 $text = nl2br(htmlentities($row['text']));
-		 $date = new DateTime($row['created_at']);
-		 $dateFormatted = $date->format('d.m.y H:i');
 		 
-		 echo "<div style=\"border: 1px solid #000000;\">
-		 <div style=\"border-bottom:1px solid #000000;  padding: 5px; \">$dateFormatted von <a href=\"mailto:$email\">$name</a></div>
+		 
+		 echo "<div style=\"border: 0px solid #000000;\">
+		 <div style=\"border-top:1px solid #000000;  padding: 5px; width: 30px clear: both; \"> von <a href=\"mailto:$email\">$name </a></div>
 		 <div style=\"padding: 5px;\">$text</div>
 		 </div><br>";
 		 

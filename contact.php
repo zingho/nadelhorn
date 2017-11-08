@@ -38,26 +38,7 @@
 		</div>
 	
 	<div class="text">
-		<p>Beside all the well-known places, there are hidden treasures far away from the mainstream tourism. Balance the luxury of Switzerland with local habits, accommodation and cultural events.</br>
-
-			Our focus are individuals and small groups who want to experience Switzerland away from the mainstream where you visit authentic and unique destinations and admire what Swiss pioneers have built.</br></br>
-
-			<b>You want to</b></br>
-
-				<ul><li>Round up your company visit in Switzerland with an extraordinary experience</li>
-				<li>Reward your valuable employees with an unforgettable present</li>
-				<li>Grant yourself with a tailor-made and memorable involvement into the day to day life in Switzerland</li>
-				<li>All tours are tailor-made to your individual needs and preferences. We want you to enjoy your stay and to go home with unforgettable memories.</li></ul></br><br>
-
-			 
-				<b>We offer</b> </br>
-
-				<ul><li>Comprehensive service during the whole tour </li></br>
-				<li>Experience and Know-How in organizing tours in Switzerland</li></br>
-				<li>A personal English speaking guide</li></br>
-				<li>Your personal bus / limousine with driver</li></br>
-				<li>Local tour guides in Chinese and other languages</li></ul></p>
-  
+		
 	</div>
 	
 	
