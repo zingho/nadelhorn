@@ -38,28 +38,128 @@
 		</div>
 	
 	<div class="text">
-		<p>Beside all the well-known places, there are hidden treasures far away from the mainstream tourism. Balance the luxury of Switzerland with local habits, accommodation and cultural events.</br>
-
-			Our focus are individuals and small groups who want to experience Switzerland away from the mainstream where you visit authentic and unique destinations and admire what Swiss pioneers have built.</br></br>
-
-			<b>You want to</b></br>
-
-				<ul><li>Round up your company visit in Switzerland with an extraordinary experience</li>
-				<li>Reward your valuable employees with an unforgettable present</li>
-				<li>Grant yourself with a tailor-made and memorable involvement into the day to day life in Switzerland</li>
-				<li>All tours are tailor-made to your individual needs and preferences. We want you to enjoy your stay and to go home with unforgettable memories.</li></ul></br><br>
-
-			 
-				<b>We offer</b> </br>
-
-				<ul><li>Comprehensive service during the whole tour </li></br>
-				<li>Experience and Know-How in organizing tours in Switzerland</li></br>
-				<li>A personal English speaking guide</li></br>
-				<li>Your personal bus / limousine with driver</li></br>
-				<li>Local tour guides in Chinese and other languages</li></ul></p>
+		
   
 	</div>
-	
+	<?php
+		$pdo = new PDO('mysql:host=localhost;dbname=nadelhorn', 'root', '');
+		$show_form = true; 
+		$error = null;
+		 
+		//Das Formular wurde abgesendet, überprüfe den Inhalt und speichere es ab
+		if(isset($_GET['submit'])) {
+		 $name = trim($_POST['name']);
+		 $email = trim($_POST['email']);
+		 $text = trim($_POST['text']);
+		 
+		 //Überprüfen dass die E-Mail-Adresse gültig ist
+		 if(!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+		 $error = 'Bitte eine gültige E-Mail-Adresse eingeben<br>';
+		 } else if(empty($name)) {
+		 $error = 'Bitte einen Namen eingeben<br>';
+		 } else if(empty($text)) {
+		 $error = 'Bitte einen Text eingeben<br>'; 
+		 } else {
+		 $statement = $pdo->prepare("INSERT INTO gaestebuch (name, email, text) VALUES (:name, :email, :text)");
+		 $result = $statement->execute(array('name' => $name, 'email' => $email, 'text' => $text));
+		 
+		 if($result) {
+		 echo '<b>Dein Eintrag wurde erfolgreich gespeichert</b><br><br>';
+		 $show_form = false;
+		 } else {
+		 $error = 'Beim Abspeichern ist leider ein Fehler aufgetreten<br>';
+		 }
+		 }
+		}
+		?>
+		 
+		<?php 
+		if(!is_null($error)) { //Ein Fehler ist aufgetreten
+		 echo $error;
+		}
+		 
+		//Ausgabe des Formulars nur wenn $showForm == true ist
+		if($show_form): 
+		?>
+		 <form action="?submit=1" method="post">
+		 Name:<br>
+		 <input type="text" size="40" maxlength="250" name="name"><br><br>
+		 
+		 E-Mail:<br>
+		 <input type="email" size="40" maxlength="250" name="email"><br><br>
+		 
+		 Text:<br>
+		 <textarea cols="50" rows="9" name="text"></textarea><br><br>
+		 
+		 <input type="submit" value="Eintragen">
+		 </form> 
+		<?php 
+		endif;
+		?>
+		 
+		<hr>
+		 
+		<?php 
+		/***********************
+		 * Ausgabe der Einträge
+		 ***********************/
+		 
+		//Ermittelt die Anzahl der Beiträge
+		$statement = $pdo->prepare("SELECT COUNT(*) AS anzahl FROM gaestebuch WHERE deleted_at IS NULL");
+		$statement->execute();
+		$row = $statement->fetch();
+		$anzahl_eintrage = $row['anzahl'];
+		echo "$anzahl_eintrage Personen sind eingetragen<br><br>";
+		 
+		 
+		//Berechne alles notwendige für die Blätterfunktion
+		$seite = 1;
+		if(isset($_GET['seite'])) {
+		 $seite = intval($_GET['seite']);
+		}
+		 
+		$beitraege_pro_seite = 20;
+		$start = ($seite-1)*$beitraege_pro_seite;
+		 
+		//Abfrage der Datenbank und Ausgabe der Daten
+		$statement = $pdo->prepare("SELECT * FROM gaestebuch WHERE deleted_at IS NULL ORDER BY id DESC LIMIT :start, :limit");
+		$statement->bindParam(':start', $start, PDO::PARAM_INT);
+		$statement->bindParam(':limit', $beitraege_pro_seite, PDO::PARAM_INT);
+		$statement->execute();
+		while($row = $statement->fetch()) {
+		 $name = htmlentities($row['name']);
+		 $email = htmlentities($row['email']);
+		 $text = nl2br(htmlentities($row['text']));
+		 $date = new DateTime($row['created_at']);
+		 $dateFormatted = $date->format('d.m.y H:i');
+		 
+		 echo "<div style=\"border: 1px solid #000000;\">
+		 <div style=\"border-bottom:1px solid #000000;  padding: 5px; \">$dateFormatted von <a href=\"mailto:$email\">$name</a></div>
+		 <div style=\"padding: 5px;\">$text</div>
+		 </div><br>";
+		 
+		}
+		 
+		//Berechne die Anzahl der Seiten:
+		$anzahl_seiten = ceil($anzahl_eintrage / floatval($beitraege_pro_seite));
+		 
+		//Ausgabe der Seitenlinks:
+		echo "<div align=\"center\">";
+		echo "<b>Seite:</b> ";
+		 
+		 
+		//Ausgabe der Links zu den verschiedenen Seiten
+		for($a=1; $a <= $anzahl_seiten; $a++) {
+		 //Wenn der User sich auf dieser Seite befindet, keinen Link ausgeben
+		 if($seite == $a){
+		 echo " <b>$a</b> ";
+		 } else { //Aus dieser Seite ist der User nicht, also einen Link ausgeben
+		 echo " <a href=\"?seite=$a\">$a</a> ";
+		 }
+		}
+		echo "</div>";
+		 
+		?>
 	
 	<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
 
