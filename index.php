@@ -25,6 +25,7 @@
 			<li><a href="login.php">Login </a></li>    
 			<li><a href="registrieren.php">Registrieren </a></li>    
 		</ul>
+		
 	</div>
 	
 	<header>
@@ -33,6 +34,14 @@
                 <h1>Switzerland beyond your imagination</h1>
                 <p>there is a lot to see in this wonderful country. We organize tours to the Region of Lucerne including it's fantastic lake, the center of Switzerland, the Bernese Oberland, Grimsel Pass, the gorgeous beauty of Valais and Graubünden to mention a few highlights.</p>
             </div>
+			
+		<form action="suche.php" method="post" id="search">
+		<table align="center" width="100%">
+			<tr>
+				<td width="60%"><input name="name" type="text" maxlength="255" size="20" /></td>
+			</tr>
+		</table>
+		</form>
     </div>
 	</header>
 		</div>
