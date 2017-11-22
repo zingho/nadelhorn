@@ -19,7 +19,7 @@
 			<li><a href="">News</a></li>
 			<li><a href="">VIP Tours</a></li>
 			<li><a href="">Impressions</a></li>    
-			<li><a href="">About us</a></li>    
+			<li><a href="about.php">About us</a></li>    
 			<li><a href="contact.php">Contact </a></li>    
 			<li><a href="guest.php" class="active">Guestbook </a></li>    
 			<li><a href="login.php">Login </a></li>    
@@ -97,7 +97,8 @@
 		endif;
 		?>
 		 
-		<hr>
+		 <br>
+		
 		 
 		<?php 
 		/***********************
@@ -133,8 +134,8 @@
 		 
 		 
 		 echo "<div style=\"border: 0px solid #000000;\">
-		 <div style=\"border-top:1px solid #000000;  padding: 5px; width: 30px clear: both; \"> von <a href=\"mailto:$email\">$name </a></div>
-		 <div style=\"padding: 5px;\">$text</div>
+		 <div style=\"border-top:1px solid #000000;  width: 650px;  padding: 5px;  margin: auto; \"> von <a href=\"mailto:$email\">$name </a></div>
+		 <div style=\"padding: 5px; \">$text</div>
 		 </div><br>";
 		 
 		}

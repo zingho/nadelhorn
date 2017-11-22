@@ -19,7 +19,7 @@
 			<li><a href="">News</a></li>
 			<li><a href="">VIP Tours</a></li>
 			<li><a href="">Impressions</a></li>    
-			<li><a href="">About us</a></li>    
+			<li><a href="about.php">About us</a></li>    
 			<li><a href="contact.php">Contact </a></li>    
 			<li><a href="guest.php">Guestbook </a></li>
 			<li><a href="login.php">Login </a></li>    

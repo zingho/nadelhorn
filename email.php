@@ -19,7 +19,7 @@
 			<li><a href="">News</a></li>
 			<li><a href="">VIP Tours</a></li>
 			<li><a href="">Impressions</a></li>    
-			<li><a href="">About us</a></li>    
+			<li><a href="about.php">About us</a></li>    
 			<li><a href="contact.php" class="active">Contact </a></li>
 			<li><a href="guest.php">Guestbook </a></li> 			
 			<li><a href="login.php">Login </a></li>    
@@ -30,7 +30,7 @@
 	<header>
 	<div class="inhalt">
             <div class="title">
-                <h1>Contact </h1>
+                <h1>Danke für Ihre Anfrage</h1>
 
             </div>
     </div>
@@ -38,29 +38,10 @@
 		</div>
 	
 	<div class="text">
-		
+		Wir werden Ihre Anfrage schnellstmöglich bearbeiten!
 	</div>
-
-<form method="post" action="email.php">
-<label for="Name">Name:</label><br>
-<input type="text" id="Name" name="Name"><br><br>
- 
-<label for="Email">E-Mail:</label><br>
-<input type="text" id="Email" name="Email"><br><br>
- 
-<label for="Betreff">Betreff:</label><br>
-<input type="text" id="Betreff" name="Betreff"><br><br>
- 
-<label for="Nachricht">Nachricht:</label><br>
-<textarea id="Nachricht" name="Nachricht" rows="10" cols="50"></textarea> <br><br>
- 
-<input type="submit" name="submit">
-</form>
-
-
 	
-	
-
+	 
 
 
 
