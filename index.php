@@ -73,7 +73,7 @@
 	<h3>Our Portfolio</h3></br>
 	
 	<div class="artikel">
-	<img src="images/Destinations.jpg" class="artikel1"></br></br
+	<img src="images/Destinations.jpg" class="artikel1"></br></br>
 	<p class="beschreibung"><b>Destinations</b></p></br>
 	<p class="beschreibung">Well known destinations such as Zermatt, Lucerne, Interlaken, Zurich, Weggis, Bern, Schaffhausen, Montreux, Lausanne, Geneva, St.Moritz, Gstaad ... and small villages such as Törbel and Gasenried ...</p></div>
 	
