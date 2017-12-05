@@ -9,7 +9,7 @@
 html{
     height: 100%;
     width: 100%;
-   
+
 }
 body {
   margin: 0;
@@ -24,36 +24,72 @@ h3{
 	text-align:center;
 }
 
-	
+
 	.artikel{
 	display: inline-block;
 	margin-right: auto;
 	margin-left: auto;
   }
 
-header {
+#bild{
     position: relative;
     width: 100%;
     min-height: auto;
     text-align: center;
     color: #fff;
+    background-image: url("../images/header.jpg");
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    transition: all 0.3s;
+    background-repeat:no-repeat;
+    -webkit-background-size:cover;
+    -moz-background-size:cover;
+    -o-background-size:cover;
+    background-size:cover;
+    background-position:center;
 }
 
-header .inhalt {
+#bild1{
     position: relative;
-    width: 90%;
+    width: 100%;
+    min-height: auto;
+    text-align: center;
+    color: #fff;
+    background-image: url("../images/guest.jpg");
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 40vh;
+    position: relative;
+    transition: all 0.3s;
+    background-repeat:no-repeat;
+    -webkit-background-size:cover;
+    -moz-background-size:cover;
+    -o-background-size:cover;
+    background-size:cover;
+    background-position:center;
+}
+
+.inhalt {
+    position: relative;
+    width: 100%;
     padding: 100px 15px 70px;
     text-align: center;
+
+
 }
 
-header .inhalt .title h1 {
+.inhalt .title h1 {
     margin-top: 0;
     margin-bottom: 20px;
     font-size: 50px;
     font-weight: 300;
 }
 
-header .inhalt .title p {
+.inhalt .title p {
     margin-bottom: 50px;
     font-size: 16px;
     font-weight: 300;
@@ -61,11 +97,11 @@ header .inhalt .title p {
 }
 
 @media(min-width:768px) {
-    header {
+    #bild, #bild1 {
         min-height: 94%;
     }
 
-    header .inhalt {
+    .inhalt {
         position: absolute;
         top: 50%;
         padding: 0 50px;
@@ -74,17 +110,17 @@ header .inhalt .title p {
         transform: translateY(-50%);
     }
 
-    header .inhalt .title {
+    .inhalt .title {
         margin-right: auto;
         margin-left: auto;
         max-width: 1000px;
     }
 
-	header .inhalt .title h1 {
+	.inhalt .title h1 {
     	font-size: 100px;
 		}
 
-    header .inhalt .title p {
+    .inhalt .title p {
         margin-right: auto;
         margin-left: auto;
         max-width: 80%;
@@ -93,6 +129,8 @@ header .inhalt .title p {
 }
 
 #header{
+  position: fixed;
+  top: 0; 
 	background-color:#FFFFFF;
 	height:70px;
 	width:100%;
@@ -117,43 +155,8 @@ body div #navigation{
 .container {
   margin: 0;
   padding: 0;
-  width: 100vw;
-  height: 100vh;
   position: relative;
   transition: all 0.3s;
-      background-image: url("../images/header.jpg");
-  background-repeat:no-repeat;
-  -webkit-background-size:cover;
-  -moz-background-size:cover;
-  -o-background-size:cover;
-  background-size:cover;
-  background-position:center;
-}
-
-.containercontact {
-  margin: 0;
-  padding: 0;
-  width: 100vw;
-  height: 100vh;
-  position: relative;
-  transition: all 0.3s;
-      background-image: url("../images/contact.jpg");
-  background-repeat:no-repeat;
-  -webkit-background-size:cover;
-  -moz-background-size:cover;
-  -o-background-size:cover;
-  background-size:cover;
-  background-position:center;
-}
-
-.containerguestbook {
-  margin: 0;
-  padding: 0;
-  width: 100vw;
-  height: 100vh;
-  position: relative;
-  transition: all 0.3s;
-      background-image: url("../images/guest.jpg");
   background-repeat:no-repeat;
   -webkit-background-size:cover;
   -moz-background-size:cover;
@@ -278,7 +281,7 @@ h1{
   }
 }
 
-  
+
   .artikel{
   display: inline-block;
   margin-right: auto;
@@ -316,7 +319,7 @@ h1{
 	-webkit-border-radius: 5px;
 	margin-left:-6px;
 	margin-top:-6px;
-	
+
 }
 
 #artikel{
@@ -359,7 +362,7 @@ h1{
     -webkit-border-radius: 20px;
     -moz-border-radius: 20px;
     border-radius: 20px;
-    text-shadow: 0 2px 2px rgba(0, 0, 0, 0.3); 
+    text-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
     -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 3px rgba(0, 0, 0, 0.2) inset;
     -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 3px rgba(0, 0, 0, 0.2) inset;
     box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 3px rgba(0, 0, 0, 0.2) inset;
@@ -379,3 +382,20 @@ h1{
     box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(0, 0, 0, 0.9) inset;
     text-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
     }
+
+body footer {
+        margin-top:20px;
+        left: 0;
+        bottom: 0;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        height:auto;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.6);
+        color: white;
+    }
+
+.Footer-Left {
+      margin-left: 20px;
+      text-align: left;
+}
