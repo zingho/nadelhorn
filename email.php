@@ -37,7 +37,7 @@
 	</header>
 		</div>
 	
-	<div class="text">
+	<div class="title1">
 		Wir werden Ihre Anfrage schnellstmöglich bearbeiten!
 	</div>
 	

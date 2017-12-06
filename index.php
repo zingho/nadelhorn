@@ -9,9 +9,10 @@
   </head>
   <body>
   <div class="container">
-	<div id="header">
-		<a href="index.php"><img src="images/logo.png" class="logo"></a>
-		<ul id="nav">
+	<div id="fixed">
+		<div id="header">
+			<a href="index.php"><img src="images/logo.png" class="logo"></a>
+			<ul id="nav">
 			<li class="toggle">
 			  <div class="bar1"></div><div class="bar2"></div><div class="bar3"></div>
 			</li>
@@ -26,6 +27,7 @@
 			<li><a href="registrieren.php">Registration </a></li>
 		</ul>
 
+	</div>
 	</div>
 
 	<div id="bild">
@@ -43,7 +45,7 @@
 		</table>
 		</form>
     </div>
-	</header>
+	</div>
 		</div>
 
 	<div class="text">
@@ -53,18 +55,17 @@
 
 			<h3>You want to</h3></br>
 
-				<ul><li>Round up your company visit in Switzerland with an extraordinary experience</li>
-				<li>Reward your valuable employees with an unforgettable present</li>
-				<li>Grant yourself with a tailor-made and memorable involvement into the day to day life in Switzerland</li>
-				<li>All tours are tailor-made to your individual needs and preferences. We want you to enjoy your stay and to go home with unforgettable memories.</li></ul></br><br></p>
+				<p>Round up your company visit in Switzerland with an extraordinary experience</p></br>
+				<p>Reward your valuable employees with an unforgettable present</p></br>
+				<p>Grant yourself with a tailor-made and memorable involvement into the day to day life in Switzerland</p></br>
+				<p>All tours are tailor-made to your individual needs and preferences. We want you to enjoy your stay and to go home with unforgettable memories.</p></br><br></p>
 
 
 				<h3>We offer</h3> </br>
-				<p>
-				<ul><li>Comprehensive service during the whole tour </li>
-				<li>Experience and Know-How in organizing tours in Switzerland</li>
-				<li>A personal English speaking guide</li>
-				<li>Your personal bus / limousine with driver</li>
+				<p>Comprehensive service during the whole tour </p></br>
+				<p>Experience and Know-How in organizing tours in Switzerland</p></br>
+				<p>A personal English speaking guide</p></br>
+				<p>Your personal bus / limousine with driver</p>
 
 	</div>
 	</br></br>

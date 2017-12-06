@@ -89,6 +89,13 @@ h3{
     font-weight: 300;
 }
 
+.title1 {
+	background-color: #32CD32;
+	color:white;
+	margin-top:0;
+	padding:10px;
+}
+
 .inhalt .title p {
     margin-bottom: 50px;
     font-size: 16px;
@@ -104,7 +111,6 @@ h3{
     .inhalt {
         position: absolute;
         top: 50%;
-        padding: 0 50px;
         -webkit-transform: translateY(-50%);
         -ms-transform: translateY(-50%);
         transform: translateY(-50%);
@@ -128,13 +134,19 @@ h3{
     }
 }
 
+#fixed {
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+}
+
 #header{
-  position: fixed;
-  top: 0; 
 	background-color:#FFFFFF;
 	height:70px;
 	width:100%;
 }
+
+
 
 h3 {
 	font-size:20px;
@@ -301,15 +313,16 @@ h1{
 		font-size:1.2em;
 }
 
-		text-align:center;
-		font-size:1.1em;
-}
 .text li{
         margin-right: auto;
         margin-left: auto;
         max-width: 1000px;
 		text-align:center;
 		font-size:1.1em;
+}
+
+.text a{
+	color: #808080;;
 }
 
 .artikel1{
