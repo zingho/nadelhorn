@@ -51,31 +51,40 @@
 
     include('db_connect.php');
 
-    $sql = "
-          SELECT  *
-          FROM news
-          ";
+    $lid = $_GET['lid'];
 
-          echo '<div id="Break">';
-          // Ausgabe
-          $result = $connect->query($sql);
-          if($result->num_rows>0){
-              while($zeile = $result->fetch_assoc()){
-              echo '<div id="news_container">';
-              echo '<img src="' . $zeile['Bild'] . '" height="150px" class="news_bild">';
-              echo "<h2><a href=\"detail.php?lid=" .$zeile['ID']. "\">". $zeile['Titel'] . "</a></h2></br>";
-              echo '<p class="clear"></p>';
-              echo "</div>";
-              }
-          }
-        echo "</div>";
+
+  	$sql = "
+  	SELECT DISTINCT *
+  	FROM news
+  	WHERE
+  	ID = '$lid'
+  	";
+
+    $result = $connect->query($sql);
+  	echo '<table id="news_container_detail">';
+  	while($zeile = $result->fetch_assoc()){
+  	echo "<tr>";
+  	echo '<td>'.'<img src="' . $zeile['Bild'] . '" height="350px"> </td>';
+  	echo "<td><h2>". $zeile['Titel'] . "</h2><br><p>". $zeile['Beschreibung'] . "</p></td>";
+  	echo "</tr>";
+      }
+  	echo "</table>";
     ?>
 
 	</div>
 
-  <div id="Footer_Index">
+  <button onclick="goBack()" class="go_back">Go back</button>
+
+  <script>
+  function goBack() {
+    window.history.back();
+  }
+  </script>
+
+  <Footer>
       <div class="Footer-Left">© 2016-2017</div>
-  </div>
+  </Footer>
 
 
 	<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
