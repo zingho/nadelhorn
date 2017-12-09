@@ -17,10 +17,8 @@
 			  <div class="bar1"></div><div class="bar2"></div><div class="bar3"></div>
 			</li>
 			<li><a href="index.php" class="active">Home</a></li>
-			<li><a href="">News</a></li>
+			<li><a href="news.php">News</a></li>
 			<li><a href="">VIP Tours</a></li>
-			<li><a href="">Impressions</a></li>
-			<li><a href="about.php">About us</a></li>
 			<li><a href="contact.php">Contact </a></li>
 			<li><a href="guest.php">Guestbook </a></li>
 			<li><a href="login.php">Login </a></li>
@@ -37,13 +35,6 @@
                 <p>there is a lot to see in this wonderful country. We organize tours to the Region of Lucerne including it's fantastic lake, the center of Switzerland, the Bernese Oberland, Grimsel Pass, the gorgeous beauty of Valais and Graubünden to mention a few highlights.</p>
             </div>
 
-		<form action="suche.php" method="post" id="search">
-		<table align="center" width="100%">
-			<tr>
-				<td width="60%"><input name="name" type="text" maxlength="255" size="20" /></td>
-			</tr>
-		</table>
-		</form>
     </div>
 	</div>
 		</div>
@@ -108,9 +99,9 @@
 
 	</div>
 
-  <footer>
+  <div id="Footer_Index">
       <div class="Footer-Left">© 2016-2017</div>
-  </footer>
+  </div>
 
 
 	<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
