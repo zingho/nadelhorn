@@ -41,7 +41,7 @@
 
 	</div>
 
-<form method="post" action="email.php">
+<form method="post" action="send_email.php">
 <label for="Name">Name:</label><br>
 <input type="text" id="Name" name="Name"><br><br>
 
