@@ -32,61 +32,51 @@
 	<div class="inhalt">
             <div class="title">
                 <h1>News</h1>
-            </div>
-
-            <form action="suche.php" method="post" class="form-wrapper cf">
-          	<input type="text" placeholder="Search here..." required name="name">
-        	  <button type="submit">Search</button>
-            </form>
-
-  </div>
+            </div>    
+    </div>
 	</div>
 		</div>
 
 	<div class="text">
 
- <?php
-			include('db_connect.php');
+    <?php
 
-			$suche = $_POST['name'];
+    include('db_connect.php');
 
-			// Bestimmen, nach was gesucht wird
-			$sql = "
-			SELECT DISTINCT *
-			FROM news
-			WHERE
-			Titel LIKE '%$suche%'
-			OR
-			Beschreibung LIKE '%$suche%';
-			";
-
-			// Ausgabe der Suche
-
-      echo '<div id="Break">';
-
-			$result = $connect->query($sql);
-			if($result->num_rows>0){
-        echo "<p>Search results for"." ".$suche . "</p></br>";
-      	while($zeile = $result->fetch_assoc()){
-          echo '<div id="news_container">';
-          echo '<img src="' . $zeile['Bild'] . '" height="150px" class="news_bild">';
-          echo "<h2><a href=\"detail.php?lid=" .$zeile['ID']. "\">". $zeile['Titel'] . "</a></h2></br>";
-          echo '<p class="clear"></p>';
-          echo "</div>";
-          }
-			}
+    $lid = $_GET['lid'];
 
 
-			// Falls keine Einträge gefunden werden
-			else{
-				echo "<h3>Keine Ergebnisse für $suche gefunden</h3>";
-			}
+  	$sql = "
+  	SELECT DISTINCT *
+  	FROM news
+  	WHERE
+  	ID = '$lid'
+  	";
 
-                    echo "</div>";
-		?>
+    $result = $connect->query($sql);
+  	echo '<table id="news_container_detail">';
+  	while($zeile = $result->fetch_assoc()){
+  	echo "<tr>";
+  	echo '<td>'.'<img src="' . $zeile['Bild'] . '" height="350px"> </td>';
+  	echo "<td><h2>". $zeile['Titel'] . "</h2><br><p>". $zeile['Beschreibung'] . "</p></td>";
+  	echo "</tr>";
+      }
+  	echo "</table>";
+    ?>
 
 	</div>
-	</br></br>
+
+  <button onclick="goBack()" class="go_back">Go back</button>
+
+  <script>
+  function goBack() {
+    window.history.back();
+  }
+  </script>
+
+  <Footer>
+      <div class="Footer-Left">© 2016-2017</div>
+  </Footer>
 
 
 	<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>

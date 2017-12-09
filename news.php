@@ -45,48 +45,35 @@
 
 	<div class="text">
 
- <?php
-			include('db_connect.php');
+    <?php
 
-			$suche = $_POST['name'];
+    include('db_connect.php');
 
-			// Bestimmen, nach was gesucht wird
-			$sql = "
-			SELECT DISTINCT *
-			FROM news
-			WHERE
-			Titel LIKE '%$suche%'
-			OR
-			Beschreibung LIKE '%$suche%';
-			";
+    $sql = "
+          SELECT  *
+          FROM news
+          ";
 
-			// Ausgabe der Suche
-
-      echo '<div id="Break">';
-
-			$result = $connect->query($sql);
-			if($result->num_rows>0){
-        echo "<p>Search results for"." ".$suche . "</p></br>";
-      	while($zeile = $result->fetch_assoc()){
-          echo '<div id="news_container">';
-          echo '<img src="' . $zeile['Bild'] . '" height="150px" class="news_bild">';
-          echo "<h2><a href=\"detail.php?lid=" .$zeile['ID']. "\">". $zeile['Titel'] . "</a></h2></br>";
-          echo '<p class="clear"></p>';
-          echo "</div>";
+          echo '<div id="Break">';
+          // Ausgabe
+          $result = $connect->query($sql);
+          if($result->num_rows>0){
+              while($zeile = $result->fetch_assoc()){
+              echo '<div id="news_container">';
+              echo '<img src="' . $zeile['Bild'] . '" height="150px" class="news_bild">';
+              echo "<h2><a href=\"detail.php?lid=" .$zeile['ID']. "\">". $zeile['Titel'] . "</a></h2></br>";
+              echo '<p class="clear"></p>';
+              echo "</div>";
+              }
           }
-			}
-
-
-			// Falls keine Einträge gefunden werden
-			else{
-				echo "<h3>Keine Ergebnisse für $suche gefunden</h3>";
-			}
-
-                    echo "</div>";
-		?>
+        echo "</div>";
+    ?>
 
 	</div>
-	</br></br>
+
+  <div id="Footer_Index">
+      <div class="Footer-Left">© 2016-2017</div>
+  </div>
 
 
 	<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>

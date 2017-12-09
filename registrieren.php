@@ -14,24 +14,24 @@ $pdo = new PDO('mysql:host=localhost;dbname=nadelhorn', 'root', '');
   </head>
   <body>
   <div class="container">
-	<div id="header">
-		<img src="images/logo.png" class="logo">
-		<ul id="nav">
-			<li class="toggle">
-			  <div class="bar1"></div><div class="bar2"></div><div class="bar3"></div>
-			</li>
-			<li><a href="index.php">Home</a></li>
-			<li><a href="">News</a></li>
-			<li><a href="">VIP Tours</a></li>
-			<li><a href="">Impressions</a></li>
-			<li><a href="">About us</a></li>
-			<li><a href="contact.php">Contact </a></li>
-			<li><a href="guest.php">Guestbook </a></li>
-			<li><a href="login.php">Login </a></li>
-			<li><a href="registrieren.php" class="active">Registrieren </a></li>
-		</ul>
+    <div id="fixed">
+  		<div id="header">
+  			<a href="index.php"><img src="images/logo.png" class="logo"></a>
+  			<ul id="nav">
+  			<li class="toggle">
+  			  <div class="bar1"></div><div class="bar2"></div><div class="bar3"></div>
+  			</li>
+  			<li><a href="index.php">Home</a></li>
+  			<li><a href="">News</a></li>
+  			<li><a href="">VIP Tours</a></li>
+  			<li><a href="contact.php">Contact </a></li>
+  			<li><a href="guest.php">Guestbook </a></li>
+  			<li><a href="login.php">Login </a></li>
+  			<li><a href="registrieren.php" class="active">Registration </a></li>
+  		</ul>
 
-	</div>
+  	</div>
+  	</div>
 
 	 	<div id="bild1">
 	<div class="inhalt">

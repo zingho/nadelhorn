@@ -5,28 +5,29 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Switzerland - beyond your imagination</title>
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet"> 
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
   </head>
   <body>
   <div class="containercontact">
-	<div id="header">
-		<img src="images/logo.png" class="logo">
-		<ul id="nav">
-			<li class="toggle">
-			  <div class="bar1"></div><div class="bar2"></div><div class="bar3"></div>
-			</li>
-			<li><a href="index.php">Home</a></li>
-			<li><a href="">News</a></li>
-			<li><a href="">VIP Tours</a></li>
-			<li><a href="">Impressions</a></li>    
-			<li><a href="about.php">About us</a></li>    
-			<li><a href="contact.php" class="active">Contact </a></li>
-			<li><a href="guest.php">Guestbook </a></li> 			
-			<li><a href="login.php">Login </a></li>    
-			<li><a href="registrieren.php">Registrieren </a></li>    
-		</ul>
-	</div>
-	
+    <div id="fixed">
+  		<div id="header">
+  			<a href="index.php"><img src="images/logo.png" class="logo"></a>
+  			<ul id="nav">
+  			<li class="toggle">
+  			  <div class="bar1"></div><div class="bar2"></div><div class="bar3"></div>
+  			</li>
+  			<li><a href="index.php">Home</a></li>
+  			<li><a href="">News</a></li>
+  			<li><a href="">VIP Tours</a></li>
+  			<li><a href="contact.php">Contact </a></li>
+  			<li><a href="guest.php">Guestbook </a></li>
+  			<li><a href="login.php">Login </a></li>
+  			<li><a href="registrieren.php">Registration </a></li>
+  		</ul>
+
+  	</div>
+  	</div>
+
 	<header>
 	<div class="inhalt">
             <div class="title">
@@ -36,16 +37,16 @@
     </div>
 	</header>
 		</div>
-	
+
 	<div class="title1">
 		Wir werden Ihre Anfrage schnellstmöglich bearbeiten!
 	</div>
-	
-	 
 
 
 
-	
+
+
+
 	<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
 
     <script src="js/index.js"></script>
