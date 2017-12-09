@@ -32,15 +32,7 @@
 	<div class="inhalt">
             <div class="title">
                 <h1>News</h1>
-            </div>
-
-		<form action="suche.php" method="post" id="search">
-		<table align="center" width="100%">
-			<tr>
-				<td width="60%"><input name="name" type="text" maxlength="255" size="20" /></td>
-			</tr>
-		</table>
-		</form>
+            </div>    
     </div>
 	</div>
 		</div>

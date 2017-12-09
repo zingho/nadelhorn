@@ -34,14 +34,12 @@
                 <h1>News</h1>
             </div>
 
-		<form action="suche.php" method="post" id="search">
-		<table align="center" width="100%">
-			<tr>
-				<td width="60%"><input name="name" type="text" maxlength="255" size="20" /></td>
-			</tr>
-		</table>
-		</form>
-    </div>
+            <form action="suche.php" method="post" class="form-wrapper cf">
+          	<input type="text" placeholder="Search here..." required name="name">
+        	  <button type="submit">Search</button>
+            </form>
+
+  </div>
 	</div>
 		</div>
 

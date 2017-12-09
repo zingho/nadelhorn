@@ -9,45 +9,43 @@
   </head>
   <body>
   <div class="container">
-    <div id="fixed">
-  		<div id="header">
-  			<a href="index.php"><img src="images/logo.png" class="logo"></a>
-  			<ul id="nav">
-  			<li class="toggle">
-  			  <div class="bar1"></div><div class="bar2"></div><div class="bar3"></div>
-  			</li>
-  			<li><a href="index.php">Home</a></li>
-  			<li><a href="">News</a></li>
-  			<li><a href="">VIP Tours</a></li>
-  			<li><a href="contact.php">Contact </a></li>
-  			<li><a href="guest.php">Guestbook </a></li>
-  			<li><a href="login.php">Login </a></li>
-  			<li><a href="registrieren.php">Registration </a></li>
-  		</ul>
+	<div id="fixed">
+		<div id="header">
+			<a href="index.php"><img src="images/logo.png" class="logo"></a>
+			<ul id="nav">
+			<li class="toggle">
+			  <div class="bar1"></div><div class="bar2"></div><div class="bar3"></div>
+			</li>
+			<li><a href="index.php">Home</a></li>
+			<li><a href="news.php" class="active">News</a></li>
+			<li><a href="">VIP Tours</a></li>
+			<li><a href="contact.php">Contact </a></li>
+			<li><a href="guest.php">Guestbook </a></li>
+			<li><a href="login.php">Login </a></li>
+			<li><a href="registrieren.php">Registration </a></li>
+		</ul>
 
-  	</div>
-  	</div>
+	</div>
+	</div>
 
-	<header>
+	<div id="bild1">
 	<div class="inhalt">
             <div class="title">
-                <h1>Switzerland beyond your imagination</h1>
-                <p>there is a lot to see in this wonderful country. We organize tours to the Region of Lucerne including it's fantastic lake, the center of Switzerland, the Bernese Oberland, Grimsel Pass, the gorgeous beauty of Valais and Graubünden to mention a few highlights.</p>
+                <h1>News</h1>
             </div>
 
-		<form action="suche.php" method="post" id="search">
-		<table align="center" width="100%">
-			<tr>
-				<td width="60%"><input name="name" type="text" maxlength="255" size="20" /></td>
-			</tr>
-		</table>
-		</form>
-    </div>
-	</header>
+            <form action="suche.php" method="post" class="form-wrapper cf">
+          	<input type="text" placeholder="Search here..." required name="name">
+        	  <button type="submit">Search</button>
+            </form>
+
+  </div>
+	</div>
 		</div>
 
 	<div class="text">
-					<?php
+
+ <?php
 			include('db_connect.php');
 
 			$suche = $_POST['name'];
@@ -55,30 +53,40 @@
 			// Bestimmen, nach was gesucht wird
 			$sql = "
 			SELECT DISTINCT *
-			FROM
+			FROM news
 			WHERE
-			Land LIKE '%$suche%'
+			Titel LIKE '%$suche%'
 			OR
-			Name LIKE '%$suche%';
+			Beschreibung LIKE '%$suche%';
 			";
 
 			// Ausgabe der Suche
+
+      echo '<div id="Break">';
+
 			$result = $connect->query($sql);
 			if($result->num_rows>0){
-
+        echo "<p>Search results for"." ".$suche . "</p></br>";
+      	while($zeile = $result->fetch_assoc()){
+          echo '<div id="news_container">';
+          echo '<img src="' . $zeile['Bild'] . '" height="150px" class="news_bild">';
+          echo "<h2><a href=\"detail.php?lid=" .$zeile['ID']. "\">". $zeile['Titel'] . "</a></h2></br>";
+          echo '<p class="clear"></p>';
+          echo "</div>";
+          }
 			}
+
 
 			// Falls keine Einträge gefunden werden
 			else{
 				echo "<h3>Keine Ergebnisse für $suche gefunden</h3>";
 			}
+
+                    echo "</div>";
 		?>
 
 	</div>
 	</br></br>
-
-	<div id="artikel">
-	<h3>Our Portfolio</h3></br>
 
 
 	<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
