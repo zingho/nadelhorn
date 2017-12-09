@@ -8,41 +8,55 @@
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
   </head>
   <body>
-  <div class="containercontact">
-    <div id="fixed">
-  		<div id="header">
-  			<a href="index.php"><img src="images/logo.png" class="logo"></a>
-  			<ul id="nav">
-  			<li class="toggle">
-  			  <div class="bar1"></div><div class="bar2"></div><div class="bar3"></div>
-  			</li>
-  			<li><a href="index.php">Home</a></li>
-  			<li><a href="">News</a></li>
-  			<li><a href="">VIP Tours</a></li>
-  			<li><a href="contact.php">Contact </a></li>
-  			<li><a href="guest.php">Guestbook </a></li>
-  			<li><a href="login.php">Login </a></li>
-  			<li><a href="registrieren.php">Registration </a></li>
-  		</ul>
+          <div class="container">
 
-  	</div>
-  	</div>
+          <div id="fixed"> <!-- Macht, dass die Navigation + das Logo immer mitscrollt -->
+        		  <div id="header">
+        			     <a href="index.php"><img src="images/logo.png" class="logo"></a> <!-- Logo -->
+        			      <ul id="nav">
+        			           <li class="toggle"> <!-- Navigation / responsive / funktioniert noch nicht ganz -->
+        			                <div class="bar1"></div><div class="bar2"></div><div class="bar3"></div>
+        			           </li>
 
-	<header>
-	<div class="inhalt">
-            <div class="title">
-                <h1>Danke für Ihre Anfrage</h1>
+                          <!-- Navigation Listenelemente -->
+                    			<li><a href="index.php">Home</a></li>
+                    			<li><a href="news.php">News</a></li>
+                    			<li><a href="">VIP Tours</a></li>
+                    			<li><a href="contact.php" class="active">Contact </a></li>
+                    			<li><a href="guest.php">Guestbook </a></li>
+                    			<li><a href="login.php">Login </a></li>
+                    			<li><a href="registrieren.php">Registration </a></li>
+        		     </ul>
+        		  </div>
+        	</div>
 
+          <div id="bild1"> <!-- Kleinerer Header für die Unterseiten -->
+            	<div class="inhalt">
+                        <div class="title">
+                <h1>Thank you for your request</h1>
             </div>
     </div>
 	</header>
 		</div>
+  		</div>
 
-	<div class="title1">
-		Wir werden Ihre Anfrage schnellstmöglich bearbeiten!
+	<div class="text">
+
+    Your Mail will be sent.
+
+    <?php
+    $empfaenger = $_POST['email'];
+    $betreff = "Nadelhorn.ch";
+    $from = "From: Admin Nadelhorn <admin@nadelhorn.ch>";
+    $text = $_POST['text'];
+
+    mail($empfaenger, $betreff, $text, $from);
+    ?>
 	</div>
 
-
+  <Footer>
+      <div class="Footer-Left">© 2016-2017
+  </Footer>
 
 
 

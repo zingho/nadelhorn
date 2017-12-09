@@ -44,55 +44,34 @@
 
     <?php
 
-    include('db_connect.php');
+    //Schauen ob der User eingeloggt ist
+    session_start();
+    if(!isset($_SESSION['userid'])) {
+     die('Please log in first');
+    }
 
     $lid = $_GET['lid'];
 
+    include('db_connect.php');
 
-  	$sql = "
-  	SELECT DISTINCT *
-  	FROM news
-  	WHERE
-  	ID = '$lid'
-  	";
+    $sql = "
+    SELECT DISTINCT *
+    FROM news
+    WHERE
+    ID = '$lid'
+    ";
 
+    //Ausgabe Resultat
     $result = $connect->query($sql);
-  	echo '<table id="news_container_detail">';
-  	while($zeile = $result->fetch_assoc()){
-  	echo "<tr>";
-  	echo '<td>'.'<img src="' . $zeile['Bild'] . '" height="350px"> </td>';
-  	echo "<td><h2>". $zeile['Titel'] . "</h2><br><p>". $zeile['Beschreibung'] . "</p></td>";
-  	echo "</tr>";
-      }
-  	echo "</table>";
+    while($zeile = $result->fetch_assoc()){
+      echo $zeile['ID'];
+    }
+
     ?>
-
-  <div id="buttons">
-  <button onclick="goBack()" class="go_back">Go back</button>
-  <button id="contact" style="display:inline;">Share</button>
-</div>
-
-<div id="contactForm">
-
-  <h1>Share this link!</h1>
-
-  <form method="post" action="email.php">
-    <input placeholder="Name" type="text" required />
-    <input placeholder="Email" type="email" name="email" required />
-    <?php echo '<textarea name="text">Check out this article: https://www.nadelhorn.ch/detail.php?lid=' .$lid. '</textarea>' ?>
-    <input class="formBtn" type="submit" />
-    <input class="formBtn" type="reset" />
-  </form>
-</div>
 
 	</div>
 
-  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-
-    <script  src="js/index1.js"></script>
-
-
-
+  <button onclick="goBack()" class="go_back">Go back</button>
 
   <script>
   function goBack() {
@@ -101,7 +80,7 @@
   </script>
 
   <Footer>
-      <div class="Footer-Left">© 2016-2017
+      <div class="Footer-Left">© 2016-2017</div>
   </Footer>
 
 

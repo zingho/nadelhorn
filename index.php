@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="de">
+
   <head>
 	<link rel="stylesheet" href="css/main.css">
     <meta charset="utf-8">
@@ -7,37 +8,40 @@
     <title>Switzerland - beyond your imagination</title>
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
   </head>
+
   <body>
   <div class="container">
-	<div id="fixed">
-		<div id="header">
-			<a href="index.php"><img src="images/logo.png" class="logo"></a>
-			<ul id="nav">
-			<li class="toggle">
-			  <div class="bar1"></div><div class="bar2"></div><div class="bar3"></div>
-			</li>
-			<li><a href="index.php" class="active">Home</a></li>
-			<li><a href="news.php">News</a></li>
-			<li><a href="">VIP Tours</a></li>
-			<li><a href="contact.php">Contact </a></li>
-			<li><a href="guest.php">Guestbook </a></li>
-			<li><a href="login.php">Login </a></li>
-			<li><a href="registrieren.php">Registration </a></li>
-		</ul>
 
-	</div>
+  <div id="fixed"> <!-- Macht, dass die Navigation + das Logo immer mitscrollt -->
+		  <div id="header">
+			     <a href="index.php"><img src="images/logo.png" class="logo"></a> <!-- Logo -->
+			      <ul id="nav">
+			           <li class="toggle"> <!-- Navigation / responsive / funktioniert noch nicht ganz -->
+			                <div class="bar1"></div><div class="bar2"></div><div class="bar3"></div>
+			           </li>
+
+                  <!-- Navigation Listenelemente -->
+            			<li><a href="index.php" class="active">Home</a></li>
+            			<li><a href="news.php">News</a></li>
+            			<li><a href="">VIP Tours</a></li>
+            			<li><a href="contact.php">Contact </a></li>
+            			<li><a href="guest.php">Guestbook </a></li>
+            			<li><a href="login.php">Login </a></li>
+            			<li><a href="registrieren.php">Registration </a></li>
+		     </ul>
+		  </div>
 	</div>
 
-	<div id="bild">
-	<div class="inhalt">
-            <div class="title">
-                <h1>Switzerland beyond your imagination</h1>
-                <p>there is a lot to see in this wonderful country. We organize tours to the Region of Lucerne including it's fantastic lake, the center of Switzerland, the Bernese Oberland, Grimsel Pass, the gorgeous beauty of Valais and Graubünden to mention a few highlights.</p>
-            </div>
+  	<div id="bild">
+    	   <div class="inhalt">
+                <div class="title">
+                    <h1>Switzerland beyond your imagination</h1>
+                    <p>there is a lot to see in this wonderful country. We organize tours to the Region of Lucerne including it's fantastic lake, the center of Switzerland, the Bernese Oberland, Grimsel Pass, the gorgeous beauty of Valais and Graubünden to mention a few highlights.</p>
+                </div>
+        </div>
+  </div>
 
-    </div>
-	</div>
-		</div>
+</div>
 
 	<div class="text">
 		<p>Beside all the well-known places, there are hidden treasures far away from the mainstream tourism. Balance the luxury of Switzerland with local habits, accommodation and cultural events.</br>
@@ -64,6 +68,7 @@
 	<div id="artikel">
 	<h3>Our Portfolio</h3></br>
 
+  <!-- Boxen mit Informationen -->
 	<div class="artikel">
 	<img src="images/Destinations.jpg" class="artikel1"></br></br>
 	<p class="beschreibung"><b>Destinations</b></p></br>
@@ -103,10 +108,11 @@
       <div class="Footer-Left">© 2016-2017</div>
   </div>
 
-
+ <!-- jquery Link -->
 	<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
 
-    <script src="js/index.js"></script>
+  <!-- JS Navigation -->
+  <script src="js/index.js"></script>
 
   </body>
 </html>

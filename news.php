@@ -8,29 +8,31 @@
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
   </head>
   <body>
-  <div class="container">
-	<div id="fixed">
-		<div id="header">
-			<a href="index.php"><img src="images/logo.png" class="logo"></a>
-			<ul id="nav">
-			<li class="toggle">
-			  <div class="bar1"></div><div class="bar2"></div><div class="bar3"></div>
-			</li>
-			<li><a href="index.php">Home</a></li>
-			<li><a href="news.php" class="active">News</a></li>
-			<li><a href="">VIP Tours</a></li>
-			<li><a href="contact.php">Contact </a></li>
-			<li><a href="guest.php">Guestbook </a></li>
-			<li><a href="login.php">Login </a></li>
-			<li><a href="registrieren.php">Registration </a></li>
-		</ul>
+          <div class="container">
 
-	</div>
-	</div>
+          <div id="fixed"> <!-- Macht, dass die Navigation + das Logo immer mitscrollt -->
+        		  <div id="header">
+        			     <a href="index.php"><img src="images/logo.png" class="logo"></a> <!-- Logo -->
+        			      <ul id="nav">
+        			           <li class="toggle"> <!-- Navigation / responsive / funktioniert noch nicht ganz -->
+        			                <div class="bar1"></div><div class="bar2"></div><div class="bar3"></div>
+        			           </li>
+                          
+                          <!-- Navigation Listenelemente -->
+                    			<li><a href="index.php">Home</a></li>
+                    			<li><a href="news.php" class="active">News</a></li>
+                    			<li><a href="">VIP Tours</a></li>
+                    			<li><a href="contact.php">Contact </a></li>
+                    			<li><a href="guest.php">Guestbook </a></li>
+                    			<li><a href="login.php">Login </a></li>
+                    			<li><a href="registrieren.php">Registration </a></li>
+        		     </ul>
+        		  </div>
+        	</div>
 
-	<div id="bild1">
-	<div class="inhalt">
-            <div class="title">
+          <div id="bild1"> <!-- Kleinerer Header für die Unterseiten -->
+            	<div class="inhalt">
+                        <div class="title">
                 <h1>News</h1>
             </div>
 
