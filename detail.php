@@ -61,8 +61,8 @@
   	while($zeile = $result->fetch_assoc()){
   	echo "<tr>";
   	echo '<td>'.'<img src="' . $zeile['Bild'] . '" height="350px"> </td>';
-  	echo "<td><h2>". $zeile['Titel'] . "</h2><br><p>". $zeile['Beschreibung'] . "</p></td>";
-  	echo "</tr>";
+  	echo "<td><h2>". $zeile['Titel'] . "</h2><br><p>". $zeile['Beschreibung'] . "</p><br><a href=\"bilderupload.php?lid=" .$zeile['ID']. "\">".'<p style="color:blue;">Change Image</p>' . "</a></td>";
+    echo "</tr>";
       }
   	echo "</table>";
     ?>
