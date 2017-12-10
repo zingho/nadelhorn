@@ -46,7 +46,7 @@
 
 	<?php
 	session_start();
-	$pdo = new PDO('mysql:host=localhost;dbname=nadelhorn', 'root', '');
+	$pdo = new PDO('mysql:host=localhost;dbname=nadelhorn', 'root', 'my123');
 
 	if(isset($_GET['login'])) {
 	 $email = $_POST['email'];
@@ -76,10 +76,10 @@
 	E-Mail:<br>
 	<input class="input" type="email" size="40" maxlength="250" name="email"><br><br><br>
 
-	Dein Passwort:<br>
+	Your password:<br>
 	<input class="input" type="password" size="40"  maxlength="250" name="passwort"><br><br>
 
-	<input type="submit" value="Abschicken" class="knopf">
+	<input type="submit" value="Submit" class="knopf">
 	</form>
 	</br>
 	</div>

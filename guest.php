@@ -42,7 +42,7 @@
 
 	<div class="text">
 	<?php
-		$pdo = new PDO('mysql:host=localhost;dbname=nadelhorn', 'root', '');
+		$pdo = new PDO('mysql:host=localhost;dbname=nadelhorn', 'root', 'my123');
 		$show_form = true;
 		$error = null;
 
