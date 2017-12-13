@@ -88,7 +88,7 @@
 		 E-Mail:<br>
 		 <input type="email" size="40" maxlength="250" name="email"><br><br>
 
-		 Text:<br>
+		 Message:<br>
 		 <textarea cols="50" rows="9" name="text"></textarea><br><br>
 
 		 <input type="submit" value="Eintragen">
